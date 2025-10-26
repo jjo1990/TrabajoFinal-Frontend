@@ -1,0 +1,93 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo cálido */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f0e1; /* Beige claro */
+}
+
+/* Card del formulario */
+form {
+  background-color: #8b5e3cdd; /* Marrón semi-transparente */
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 360px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Título */
+h2 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d4c4b6; /* beige claro */
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border: 2px solid #d4a373; /* marrón claro */
+  outline: none;
+  box-shadow: 0 0 5px rgba(212, 163, 115, 0.5);
+}
+
+/* Botón */
+button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #d4a373; /* Marrón claro */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #c28e5b; /* Marrón más oscuro */
+  transform: translateY(-2px);
+}
+
+/* Pie del formulario */
+p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+a {
+  color: #f5f0e1; /* beige claro */
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ffd9a6; /* beige más brillante */
+  text-decoration: underline;
+}
