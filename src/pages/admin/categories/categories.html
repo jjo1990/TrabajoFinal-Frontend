@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin - Categorías</title>
+  <link rel="stylesheet" href="../../../style.css" />
+  <link rel="stylesheet" href="../adminHome/adminHome.css" />
+  <link rel="stylesheet" href="./categories.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <h2>Cafe - Bar </h2>
+      </div>
+      <nav class="topnav">
+        <a href="../../../index.html">Tienda</a>
+        <a href="#">Panel Admin</a>
+        <span id="welcome" class="user">Juan Pérez</span>
+        <button id="themeToggle" class="btn">Tema</button>
+        <button id="btnLogout" class="btn logout">Cerrar Sesión</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="admin-page">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3>Administración</h3>
+        <ul>
+          <li>Dashboard</li>
+          <li class="active">Categorías</li>
+          <li><a href="../products/products.html">Productos</a></li>
+          <li><a href="../orders/orders.html">Pedidos</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <a href="../../../index.html">Ver Tienda</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-header">
+        <h1 class="page-title">Gestión de Categorías</h1>
+        <button id="openNewCategory" class="btn new">+ Nueva Categoría</button>
+      </div>
+
+      <section class="table-card">
+        <div class="table-header"> 
+          <div>ID</div>
+          <div>Imagen</div>
+          <div>Nombre</div>
+          <div>Descripción</div>
+          <div>Acciones</div>
+        </div>
+
+        <table id="category-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+      
+        <!-- Modal para crear/editar categoría -->
+        <div id="category-modal" class="modal-overlay" aria-hidden="true">
+          <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="modal-header">
+              <h3 id="modal-title">Nueva Categoría</h3>
+              <button id="modalClose" class="modal-close" aria-label="Cerrar">×</button>
+            </div>
+            <form id="category-form" class="modal-body">
+              <input type="hidden" id="category-id" />
+              <label for="category-name">Nombre</label>
+              <input type="text" id="category-name" placeholder="Nombre de categoría" required />
+
+              <label for="category-image">Imagen (URL)</label>
+              <input type="text" id="category-image" placeholder="https://.../imagen.jpg" />
+              <div class="image-preview-wrap">
+                <img id="category-image-preview" class="image-preview" src="/public/placeholder.png" alt="Preview" />
+              </div>
+
+              <label for="category-desc">Descripción (opcional)</label>
+              <textarea id="category-desc" rows="3" placeholder="Descripción"></textarea>
+
+              <div class="modal-actions">
+                <button type="button" id="modalCancel" class="btn">Cancelar</button>
+                <button type="submit" class="btn primary">Guardar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </main>
+  </div>
+
+  <script type="module" src="./categories.ts"></script>
+</body>
+</html>

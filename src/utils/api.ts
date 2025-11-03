@@ -41,3 +41,19 @@ export async function registerUser(user: IUserRegister) {
   }
   return res.json();
 }
+
+//crud prodructos
+export async function apiFetch(endpoint: string, options: RequestInit = {}) {
+  const res = await fetch(`${BASE_URL}${endpoint}`, {
+    headers: { "Content-Type": "application/json" },
+    ...options,
+  });
+
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(`Error ${res.status}: ${errorText}`);
+  }
+  return res.json();
+}
+
+
